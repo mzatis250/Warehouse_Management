@@ -11,6 +11,8 @@ public class CashFlow implements CashFlowObserver {
 
 
     public CashFlow(double budget, double gross){
+        this.budget=budget;
+        this.gross=gross;
         balance=gross-budget;
     }
 

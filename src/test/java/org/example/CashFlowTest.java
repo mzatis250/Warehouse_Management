@@ -9,6 +9,7 @@ public class CashFlowTest extends TestCase {
     }
 
     public void testAttach() {
+
     }
 
     public void testDetach() {

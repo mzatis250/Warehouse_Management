@@ -8,9 +8,9 @@ public class Supplier {
     private String supplierName;
     private String supplierNum;
     private String supplierLoc;
-    private Goods typeofGoods;
+    private String typeofGoods;
 
-    private Supplier(String supplierName, String supplierNum, String supplierLoc, Goods typeofGoods) {
+    private Supplier(String supplierName, String supplierNum, String supplierLoc, String typeofGoods) {
         this.supplierName=supplierName;
         this.supplierNum=supplierNum;
         this.supplierLoc=supplierLoc;
@@ -21,8 +21,9 @@ public class Supplier {
         private String supplierName;
         private String supplierNum;
         private String supplierLoc;
-        private Goods typeofGoods;
+        private String typeofGoods;
 
+        private List<Goods>goodsList;
         public SupplierBuilder(String supplierName, String supplierLoc) {
             this.supplierName=supplierName;
             this.supplierLoc=supplierLoc;
@@ -30,13 +31,15 @@ public class Supplier {
                 for(int i=0; i<7; i++) {
                     this.supplierNum=this.supplierNum.concat(String.valueOf(ThreadLocalRandom.current().nextInt(0, 9)));
                 }
+                goodsList.add(new Goods(typeofGoods));
+
 
         }
         public SupplierBuilder setSupplierNum(String supplierNum) {
             this.supplierNum=supplierNum;
             return this;
         }
-        public SupplierBuilder setTypeofGoods(Goods typeofGoods) {
+        public SupplierBuilder setTypeofGoods(String typeofGoods) {
             this.typeofGoods=typeofGoods;
             return this;
         }

@@ -31,7 +31,7 @@ public class Warehouse {
     public void addWarehouse(Warehouse warehouse) {this.warehouses.add(warehouse);}
     public void removeWarehouse(Warehouse warehouse) {this.warehouses.add(warehouse);}
     private static Warehouse warehouse= new Warehouse("Keleti", UUID.randomUUID(), "Budapest");
-    public void addEmployees(String empname, UUID empid, String emppermission){
-        employeesList.add(new Employees(empname, empid, emppermission));
+    public void addEmployees(String empname, UUID empid){
+        employeesList.add(new Employees(empname, empid));
     }
 }

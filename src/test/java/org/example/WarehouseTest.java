@@ -2,6 +2,9 @@ package org.example;
 
 import junit.framework.TestCase;
 
+import java.util.Random;
+import java.util.UUID;
+
 public class WarehouseTest extends TestCase {
     public void testWarehouse() {
     }

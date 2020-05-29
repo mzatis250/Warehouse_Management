@@ -26,6 +26,7 @@ public class SupplierTest {
 
     @Test
     public void setTypeofGoods() {
+
     }
 
     @Test
@@ -34,5 +35,9 @@ public class SupplierTest {
 
     @Test
     public void testToString() {
+    }
+
+    @Test
+    public void testToString1() {
     }
 }
