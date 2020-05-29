@@ -1,6 +1,7 @@
 package org.example;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 import java.util.UUID;
 
@@ -31,7 +32,7 @@ public class Warehouse {
     public void addWarehouse(Warehouse warehouse) {this.warehouses.add(warehouse);}
     public void removeWarehouse(Warehouse warehouse) {this.warehouses.add(warehouse);}
     private static Warehouse warehouse= new Warehouse("Keleti", UUID.randomUUID(), "Budapest");
-    public void addEmployees(String empname, UUID empid){
-        employeesList.add(new Employees(empname, empid));
+    public void addEmployees(String empname, UUID empid, Date birth_date, String tax_num, String address){
+        employeesList.add(new Employees(empname, empid, birth_date, tax_num, address));
     }
 }
