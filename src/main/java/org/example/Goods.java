@@ -1,22 +1,26 @@
 package org.example;
 
 import java.util.UUID;
+import java.util.concurrent.ThreadLocalRandom;
 
 public class Goods {
     private String nameofGoods;
     private String typeofGoods;
     private int availableAmount;
-    private UUID goodsId;
-    private boolean isAvailable;
-    private int cost;
-    public Goods(String nameofGoods, String typeofGoods, int availableAmount, UUID goodsId, boolean isAvailable) {
+    private String goodsId;
+    private double cost;
+    public Goods(String nameofGoods, String typeofGoods, int availableAmount, double cost) {
         this.nameofGoods=nameofGoods;
         this.typeofGoods=typeofGoods;
         this.availableAmount=availableAmount;
-        this.goodsId=goodsId;
-        this.isAvailable=isAvailable;
+        for(int i=0; i<7; i++) {
+            this.goodsId=this.goodsId.concat(String.valueOf(ThreadLocalRandom.current().nextInt(0, 9)));
+        }
+
+        this.cost=cost;
     }
     public Goods(String typeofGoods) {
         this.typeofGoods=typeofGoods;
     }
+
 }

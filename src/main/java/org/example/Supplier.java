@@ -1,5 +1,6 @@
 package org.example;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.ThreadLocalRandom;
 
@@ -9,7 +10,7 @@ public class Supplier {
     private String supplierNum;
     private String supplierLoc;
     private String typeofGoods;
-
+    ArrayList<Enum> typeofTrucks=new ArrayList<>();
     private Supplier(String supplierName, String supplierNum, String supplierLoc, String typeofGoods) {
         this.supplierName=supplierName;
         this.supplierNum=supplierNum;
@@ -22,7 +23,7 @@ public class Supplier {
         private String supplierNum;
         private String supplierLoc;
         private String typeofGoods;
-
+        ArrayList<Enum> typeofTrucks=new ArrayList<>();
         private List<Goods>goodsList;
         public SupplierBuilder(String supplierName, String supplierLoc) {
             this.supplierName=supplierName;
@@ -55,6 +56,13 @@ public class Supplier {
                     ", supplierLoc=" + supplierLoc + '\'' +
                     ", typeofGoods=" + typeofGoods +
                     '}';
+        }
+        public void AddTrucks() {
+            for (int i=0; i<3;i++) {
+                typeofTrucks.add(TypeofTrucks.truck_7_t);
+                typeofTrucks.add(TypeofTrucks.truck_24_t);
+                typeofTrucks.add(TypeofTrucks.van);
+            }
         }
     }
 }
